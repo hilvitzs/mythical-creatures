@@ -3,11 +3,11 @@ var Hobbit = require('../exercises/hobbit');
 
 describe('Hobbit', function () {
 
-  it.skip('should be a function', function () {
+  it('should be a function', function () {
     assert.isFunction(Hobbit);
   });
 
-  it.skip('should instantiate our good friend, Hobbit', function () {
+  it('should instantiate our good friend, Hobbit', function () {
     var hobbit = new Hobbit();
     assert.isObject(hobbit);
   });
