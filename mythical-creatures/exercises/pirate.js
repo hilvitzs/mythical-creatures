@@ -21,7 +21,10 @@ Pirate.prototype.commitHeinousAct = function() {
 }
 
 Pirate.prototype.robShip = function () {
-
+  this.booty = 100;
+  return 'YAARRR!';
 }
+
+
 
 module.exports = Pirate;
