@@ -1,7 +1,7 @@
 function Wizard(obj) {
   this.name = obj.name;
   this.rested = true;
-  this.cast = 0;
+  this.spellCount = 0;
   if (obj.bearded === undefined) {
     this.bearded = true;
   } else {
@@ -15,11 +15,13 @@ Wizard.prototype.incantation = function(spell) {
 }
 
 Wizard.prototype.cast = function() {
-  this.rested++;
-  if (this.rested < 3) {
-    return 'MAGIC BULLET';
+  this.spellCount++;
+  if (this.spellCount < 3) {
+    return 'MAGIC BULLET'
   } else {
-    return 'I SHALL NOT CAST!';
+    this.rested = false;
+    return 'I SHALL NOT CAST!'; 
   }
 }
+
 module.exports = Wizard;

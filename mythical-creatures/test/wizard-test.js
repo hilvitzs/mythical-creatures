@@ -51,6 +51,6 @@ describe('Wizard', function() {
     assert.equal(wizard.rested, true)
     wizard.cast();
     assert.equal(wizard.rested, false)
-    assert.equal(wizard.cast(), 'I SHALL NOT CAST!')
+    assert.equal(wizard.cast('I SHALL NOT CAST'), 'I SHALL NOT CAST!')
   });
 });
